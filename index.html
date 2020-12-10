@@ -61,6 +61,7 @@ line-height:140%;
 	mqtt = new Paho.MQTT.Client(host,port,"js"+generateID());
 	//document.write("connecting to "+ host);
 	var options = {
+		useSSL: true,
         timeout: 3,
 		cleanSession: true,
 		onSuccess: onConnect,
@@ -148,7 +149,7 @@ function generateID() {
 	var mqtt;
     var reconnectTimeout = 15000;
 	var host="broker.emqx.io";
-	var port=8083;
+	var port=8084;
 	var row=0;
 	var out_msg="";
 	var mcount=0;
